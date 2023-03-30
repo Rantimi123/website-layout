@@ -5,56 +5,29 @@
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
 }
-/* ::selection{
-  color: #000;
-  background: #fff;
-} */
+
 nav{
   position: relative;
-  background: #1b1b1b;
+  background: black;
   width: 100%;
   padding: 10px 0;
   z-index: 12;
   margin-bottom: 0px;
 }
-nav .menu{
+/* nav .menu{
   max-width: 1250px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  height: 90px;
-}
-.menu .logo{
+  height: 90px;  
+} */
+ .logoimg{
   filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
 }
-.menu .logo a{
-  text-decoration: none;
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
-}
-.menu ul{
-  display: inline-flex;
-}
-.menu ul li{
-  list-style: none;
-  margin-left: 7px;
-}
-.menu ul li:first-child{
-  margin-left: 0px;
-}
-.menu ul li a{
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-.menu ul li a::before{
+
+.list li a::before{
   content: '';
   width: 0;
   height: 3px;
@@ -64,14 +37,7 @@ nav .menu{
   bottom: -6px;
   transition: 0.4s;
 }
-menu ul li a:hover::before{
-  width: 100%;
-}
 
-.menu ul li a:hover{
-  background: #fff;
-  color: black;
-}
 .img{
   background: url('img3.jpg')no-repeat;
   width: 100%;
@@ -136,30 +102,78 @@ menu ul li a:hover::before{
   color: black;
 }
 
-#toggler, label{
-  display: none;} 
 
-label i{
-  color:white;
-}
-@media screen and (max-width: 600px){
-  .nav-links{
-     max-width: 100%;
-      height: 0;
-      overflow: hidden;
+      nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        flex-wrap: wrap;
+        font-size: 18px;
+        font-family: serif;
+        padding: 15px;
+        background: black;
+        /* height: 100vh; */
+    }
+    
+     nav a{
+        text-decoration: none;
+        color: white;
+    } 
+    
+    .list {
+        display: flex;
+        list-style: none;
+        gap:25px;
+    
+    }
+    .list li a:hover::before{
+      width: 100%;
       
-  }
-  label{
-      display: inline-flex;
-
-  }
-  #toggler:checked ~ .nav-links{
-      max-height: 100%;
-  }
-  .links{
-      flex-direction: column;
-      align-items: center;
-      /* padding: 20px; */
-
-  }
-} 
+    }
+    
+    .list li a:hover{
+      background: white;
+      color: black;
+      height: 70px;
+      border-radius:5px;
+    }
+    #toggler, label{
+        display: none;
+    }
+    
+     label i{
+        color:white;
+     }
+    
+     @media screen and (max-width: 600px){
+        .Menu{
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+        }
+        label{
+            display: inline-flex;
+    
+        }
+        #toggler:checked~.Menu{
+            max-height: 100%;
+        }
+        .list{
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+    
+        }
+        .center .btns{
+          display: grid;
+        grid-auto-rows: 60px;
+        grid-gap: 20px;
+          justify-content: center;
+        }
+    } 
+    
+    
+  
+  
+ 
